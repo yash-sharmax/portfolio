@@ -1,8 +1,22 @@
-import AppsTopbar from "./AppsTopbar";
+"use client";
 
+import { usePathname } from "next/navigation";
+import AppsTopbar from "./AppsTopbar";
+import "./apps.css";
+
+// Theme class for the apps shell, picked from the route so each app page
+// gets its own identity — hub = neutral/universal, lifegame = dark
+// midnight navy + violet, mathmitra = light indigo — while the chrome
+// (topbar + footer) stays shared.
 export default function AppsLayout({ children }) {
+  const pathname = usePathname() || "/apps";
+  const theme = pathname.startsWith("/apps/lifegame")
+    ? "apps-lifegame"
+    : pathname.startsWith("/apps/mathmitra")
+      ? "apps-mathmitra"
+      : "apps-hub";
   return (
-    <div className="apps-page">
+    <div className={`apps-page ${theme}`}>
       <AppsTopbar />
       {children}
       <footer>

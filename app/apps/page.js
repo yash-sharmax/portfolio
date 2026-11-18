@@ -22,13 +22,21 @@ export default function AppsPage() {
 
           <div className="apps-grid">
             {APPS.map((app, i) => (
-              <article className="app-card" key={app.slug}>
+              <article
+                className="app-card"
+                key={app.slug}
+                style={{
+                  "--card-accent": app.accent,
+                  "--card-accent-soft": app.accentSoft,
+                }}
+              >
                 <div className="app-card-top">
                   <img className="app-icon" src={app.icon} alt={`${app.name} app icon`} />
                   <div>
                     <h3>
                       {app.name}
                       <span className="app-ver">{app.version}</span>
+                      {app.beta ? <span className="app-beta">Beta</span> : null}
                     </h3>
                     <p className="app-tagline">{app.tagline}</p>
                   </div>

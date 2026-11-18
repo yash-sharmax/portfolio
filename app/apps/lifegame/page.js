@@ -66,6 +66,7 @@ export default function LifeGamePage() {
               <div>
                 <h1>
                   Life Game <span className="app-ver">{APP.version}</span>
+                  {APP.beta ? <span className="app-beta">Beta</span> : null}
                 </h1>
                 <p className="app-tagline-lg">{APP.tagline}</p>
               </div>
