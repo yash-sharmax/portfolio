@@ -101,6 +101,21 @@ export default function MathMitraPage() {
         </div>
       </section>
 
+      {/* Screenshots */}
+      <section className="section" id="screenshots">
+        <div className="wrap">
+          <div className="sec-head">
+            <span className="sec-num">02</span>
+            <h2>Screenshots</h2>
+          </div>
+          <p className="sec-sub">
+            Real screenshots from the app — more are added as the beta grows. Click any screenshot
+            to view it fullscreen.
+          </p>
+          <ScreenshotGallery shots={SHOTS} />
+        </div>
+      </section>
+
       {/* Stats */}
       <section className="apps-stats">
         <div className="wrap">
@@ -129,7 +144,7 @@ export default function MathMitraPage() {
       <section className="section" id="features">
         <div className="wrap">
           <div className="sec-head">
-            <span className="sec-num">02</span>
+            <span className="sec-num">03</span>
             <h2>Features</h2>
           </div>
           <p className="sec-sub">
@@ -147,20 +162,6 @@ export default function MathMitraPage() {
         </div>
       </section>
 
-      {/* Screenshots */}
-      <section className="section" id="screenshots">
-        <div className="wrap">
-          <div className="sec-head">
-            <span className="sec-num">03</span>
-            <h2>Screenshots</h2>
-          </div>
-          <p className="sec-sub">
-            Real screenshots from the app — more are added as the beta grows. Click any screenshot
-            to view it fullscreen.
-          </p>
-          <ScreenshotGallery shots={SHOTS} />
-        </div>
-      </section>
 
       {/* What's inside */}
       <section className="section" id="topics">

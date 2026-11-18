@@ -103,6 +103,20 @@ export default function LifeGamePage() {
         </div>
       </section>
 
+      {/* Screenshots */}
+      <section className="section" id="screenshots">
+        <div className="wrap">
+          <div className="sec-head">
+            <span className="sec-num">02</span>
+            <h2>Screenshots</h2>
+          </div>
+          <p className="sec-sub">
+            Real screenshots from the app. Click any screenshot to view it fullscreen.
+          </p>
+          <ScreenshotGallery shots={SHOTS} />
+        </div>
+      </section>
+
       {/* Stats */}
       <section className="apps-stats">
         <div className="wrap">
@@ -131,7 +145,7 @@ export default function LifeGamePage() {
       <section className="section" id="features">
         <div className="wrap">
           <div className="sec-head">
-            <span className="sec-num">02</span>
+            <span className="sec-num">03</span>
             <h2>Features</h2>
           </div>
           <p className="sec-sub">
@@ -148,19 +162,6 @@ export default function LifeGamePage() {
         </div>
       </section>
 
-      {/* Screenshots */}
-      <section className="section" id="screenshots">
-        <div className="wrap">
-          <div className="sec-head">
-            <span className="sec-num">03</span>
-            <h2>Screenshots</h2>
-          </div>
-          <p className="sec-sub">
-            Real screenshots from the app. Click any screenshot to view it fullscreen.
-          </p>
-          <ScreenshotGallery shots={SHOTS} />
-        </div>
-      </section>
 
       {/* Install */}
       <section className="section" id="install">
