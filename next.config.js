@@ -15,6 +15,18 @@ const nextConfig = {
         destination: "/MathMitra",
         permanent: true,
       },
+      {
+        // MathMitra's old download page moved to /apps/mathmitra —
+        // old links land on the new page.
+        source: "/MathMitra-app",
+        destination: "/apps/mathmitra",
+        permanent: true,
+      },
+      {
+        source: "/MathMitra-app/:path*",
+        destination: "/apps/mathmitra",
+        permanent: true,
+      },
     ];
   },
   async rewrites() {
@@ -43,19 +55,6 @@ const nextConfig = {
           source: "/MathMitra/:path*",
           destination:
             "https://maths-formula-flutter.vercel.app/MathMitra/:path*",
-        },
-        {
-          // MathMitra product/download page — a standalone page that
-          // lives in the MathMitra project (not in this portfolio);
-          // only the routing passes through here.
-          source: "/MathMitra-app",
-          destination:
-            "https://maths-formula-flutter.vercel.app/MathMitra-app/",
-        },
-        {
-          source: "/MathMitra-app/:path*",
-          destination:
-            "https://maths-formula-flutter.vercel.app/MathMitra-app/:path*",
         },
         {
           // Life Game Habit Tracker — a standalone Next.js app that
