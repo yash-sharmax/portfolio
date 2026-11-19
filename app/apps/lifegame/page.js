@@ -1,5 +1,6 @@
 import { APPS } from "../apps-data";
 import ScreenshotGallery from "../ScreenshotGallery";
+import ApkLive from "./ApkLive";
 
 export const metadata = {
   title: "Life Game — Habit Tracker App | yashx.xyz",
@@ -60,46 +61,7 @@ export default function LifeGamePage() {
           <a className="apps-back" href="/apps">
             ← All apps
           </a>
-          <div className="app-hero-card">
-            <div className="app-hero-id">
-              <img className="app-icon-lg" src={APP.icon} alt="Life Game app icon" />
-              <div>
-                <h1>
-                  Life Game <span className="app-ver">{APP.version}</span>
-                  {APP.beta ? <span className="app-beta">Beta</span> : null}
-                </h1>
-                <p className="app-tagline-lg">{APP.tagline}</p>
-              </div>
-            </div>
-            <p className="app-lede">
-              Life Game turns your everyday habits into a game. Tick off a habit to earn XP, build
-              your streak, and climb from Recruit to Legend. Take on challenges, track your daily
-              score, and see your progress across the day, week, and month — one small win at a
-              time.
-            </p>
-            <div className="hero-actions">
-              <a className="btn btn-solid" href={APP.webAppUrl}>
-                Open Web App
-              </a>
-              <a className="btn btn-line app-hero-dl" href={APP.apkUrl}>
-                Download APK
-              </a>
-            </div>
-            <div className="app-meta app-meta-hero">
-              <span>
-                <b>Version</b> {APP.version}
-              </span>
-              <span>
-                <b>Size</b> {APP.size}
-              </span>
-              <span>
-                <b>Platform</b> {APP.platform}
-              </span>
-              <span>
-                <b>Price</b> {APP.price}
-              </span>
-            </div>
-          </div>
+          <ApkLive app={APP} />
         </div>
       </section>
 

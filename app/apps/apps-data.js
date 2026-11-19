@@ -11,11 +11,11 @@ export const APPS = [
     description:
       "Turn your everyday habits into a game. Tick off a habit to earn XP, build your streak, and climb from Recruit to Legend.",
     icon: "/apps/lifegame/icon.jpg",
-    version: "v2.8.5",
+    version: "v2.11.7",
     beta: true,
     accent: "#7C5CFF",
     accentSoft: "rgba(124, 92, 255, 0.14)",
-    size: "57 MB",
+    size: "62 MB",
     platform: "Android & Web",
     price: "Free",
     webAppUrl: "https://yashx.xyz/lifegame",
